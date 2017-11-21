@@ -12,6 +12,7 @@
 
 //1
 
+/*
 var n = +prompt('Введите целое положительное число:');
 
 var chislo = {
@@ -51,4 +52,43 @@ var chislo = {
 
 }
 
-console.log(chislo.razr(n));
+console.log(chislo.razr(n));*/
+
+
+//2
+
+
+// выписать сделанные пользователем ходы в массив и вывести их по окончании игры
+
+var game = {
+    count: 0,
+    gameIsRunning: true,
+    random: function(min, max) {
+        return Math.floor(min + Math.random() * (max - min));
+    },
+    checkAnswer: function(random) {
+        var answer = +prompt('Укажите число (-1 – закончить игру)');
+        this.moves.push(answer);
+
+        while(this.gameIsRunning) {
+            if(answer === -1) {
+                this.gameIsRunning = false;
+                alert('Игра окончена!\nВаши ходы: '+ this.moves.join(' '));
+            } else if (answer == 0 || isNaN(answer)) {
+                alert('Вы не ввели число!\nВыход.\nВаши ходы: '+ this.moves.join(' '));
+                this.gameIsRunning = false;
+            } else if (answer == random) {
+                alert('Поздравляем, вы угадали число!\nВаши ходы: '+ this.moves.join(' '));
+                this.gameIsRunning = false;
+            } else {
+                this.count++;
+                answer = +prompt('Не угадали.\nУкажите другое чило(-1 – закончить игру)\nПопыток:' + this.count);
+                this.moves.push(answer);
+            }
+        }
+    },
+    moves: []
+}
+
+
+game.checkAnswer(game.random(1, 5));
