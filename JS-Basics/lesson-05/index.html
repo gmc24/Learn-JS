@@ -3,55 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/script.js"></script>
 </head>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        font-family: Tahoma, sans-serif;
-        font-weight: bold;
-        color: #fff;
-    }
-       #wrap {
-        position: fixed;
-           display: flex;
-           flex-wrap: wrap;
-           top:50%;
-           left:50%;
-           transform: translate(-50%, -50%);
-        width: 540px;
-        height:540px;
-        background-color: #ccc;
-        text-align: center;
-    }
-    #wrap > div {
-        width: 60px;
-        height: 60px;
-        /*border: 1px solid #000;*/
-        text-align: center;
-        line-height: 60px;
-    }
-    #wrap > .lb, #wrap > .rb {
-        width: 30px;
-        background-color: #000000;
-    }
-    #wrap > .tb, #wrap > .bb {
-        height: 30px;
-        line-height: 30px;
-        background-color: #000000;
-    }
-    .rotated {transform: rotate(180deg)}
-
-</style>
-<body>
+<body onload="chess()">
 <div id="wrap">
-
 </div>
-
-<script src="js/script.js"></script>
+<!--<script src="practice.js"></script>-->
 </body>
 </html>
