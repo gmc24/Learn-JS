@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tahoma, sans-serif;
+}
+
+.wrap {
+    width: 100%;
+}
+
+h2 {
+    padding: 6px 10px;
+    background-color: #CCCCCC;
+    text-transform: uppercase;
+}
+
+#shop {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    /*background-color: #CCCCCC;*/
+}
+.tovar {
+    display: block;
+    border: 1px solid #8c8c8c;
+    width: 150px;
+    min-height: 250px;
+    margin: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+figure {
+    margin-top: 10px;
+}
+
+figcaption {
+    margin-top: 10px;
+    line-height: 2em;
+}
+
+.title {
+    text-transform: uppercase;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.add2cart {
+    display: inline-block;
+    background-color: #ffbb5c;
+    padding: 10px 15px;
+    margin: 15px 0;
+    font-size:0.8em;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: darkred;
+}
+.add2cart:hover {
+    background-color: #ffc857;
+}
+
+#cart {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+}
+.cart-header, .cart-summ, .cart-row {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    text-align: left;
+}
+.cart-header {
+    border-bottom: 2px solid #444444;
+    background-color: #DDDDDD;
+    color: #333333;
+    font-weight: bold;
+}
+.cart-row > div:not(:nth-of-type(2)) {
+    text-align: center;
+}
+.cart-header > div, .cart-summ > div, .cart-row > div {
+    display: inline-block;
+    padding: 10px;
+}
+.cart-header > div:not(:last-child), .cart-row > div:not(:last-child) {
+    border-right: 1px solid #444444;
+}
+.cart-item-thmb > img {
+    width: 50px;
+}
+.cart-item-thmb {
+    width: 200px;}
+.cart-item-title {
+    width: 500px;}
+.cart-item-price {
+    width: 150px;}
+.cart-item-qnty {
+    width: 150px;}
+
+.cart-summ {
+    border-top: 2px solid #444444;
+    font-weight: bold;
+    background-color: #eee;
+    color: #333333;
+    text-align: right;
+}
+.cart-summ-text {
+    width: 500px;}
+.cart-summ-count {
+    width: 120px;
+}

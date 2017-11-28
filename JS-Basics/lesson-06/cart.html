@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link rel="stylesheet" href="assets/cart.css">
+</head>
+<body>
+<div class="wrap">
+    <h2>каталог</h2>
+    <ul id="shop">
+        <li class="tovar" data-id="1">
+            <figure><img src="assets/img/01.png" alt="" class="img">
+                <figcaption>
+                    <h3 class="title">Товар 1</h3>
+                    <p>Цена: <span class="price">300</span> руб.</p>
+                </figcaption>
+            </figure>
+            <a class="add2cart" href="#">Купить</a>
+        </li>
+        <li class="tovar" data-id="2">
+            <figure><img src="assets/img/02.png" alt="" class="img">
+                <figcaption>
+                    <h3 class="title">Товар 2</h3>
+                    <p>Цена: <span class="price">400</span> руб.</p>
+                </figcaption>
+            </figure>
+            <a class="add2cart" href="#">Купить</a>
+        </li>
+        <li class="tovar" data-id="3">
+            <figure><img src="assets/img/03.png" alt="" class="img">
+                <figcaption>
+                    <h3 class="title">Товар 3</h3>
+                    <p>Цена: <span class="price">500</span> руб.</p>
+                </figcaption>
+            </figure>
+            <a class="add2cart" href="#">Купить</a>
+        </li>
+        <li class="tovar" data-id="4">
+            <figure><img src="assets/img/04.png" alt="" class="img">
+                <figcaption>
+                    <h3 class="title">Товар 4</h3>
+                    <p>Цена: <span class="price">600</span> руб.</p>
+                </figcaption>
+            </figure>
+            <a class="add2cart" href="#">Купить</a>
+        </li>
+    </ul>
+
+    <h2>корзина</h2>
+    <div id="cart">
+        <div class="cart-header">
+            <div class="cart-item-thmb">&nbsp;</div>
+            <div class="cart-item-title">Наименование товара</div>
+            <div class="cart-item-price">Цена, руб</div>
+            <div class="cart-item-qnty">Кол-во</div>
+            <!--<div class="cart-item-delete"></div>-->
+        </div>
+<div class="cart-row">
+            <div class="cart-item-thmb"><img src="assets/img/01.png" alt=""></div>
+            <div class="cart-item-title">Наименование товара</div>
+            <div class="cart-item-price">233</div>
+            <div class="cart-item-qnty">2</div>
+            <!--<div class="cart-item-delete"></div>-->
+        </div>
+
+
+
+        <div class="cart-summ">
+            <div class="cart-summ-text">Стоимость заказа:</div>
+            <div class="cart-summ-count"><span class="summ">1000</span> руб.</div>
+        </div>
+    </div>
+</div>
+
+
+<script src="assets/cart.js"></script>
+</body>
+</html>
+
+<!--
+2. Реализовать модуль корзины
+
+– создать блок товаров и блок корзины
+– у каждого товара есть кнопка «Купить», при нажатии на которую
+происходит добавление имени и цены товара в блок корзины.
+– корзина должна уметь считать общую сумму заказа-->
