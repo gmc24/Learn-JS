@@ -58,7 +58,7 @@ function respawn() {
     // стандартная длина змейки - 2
     var start_coord_x = Math.floor(FIELD_SIZE_X/2);
     var start_coord_y = Math.floor(FIELD_SIZE_Y/2);
-
+    // console.log(start_coord_x + ' : ' + start_coord_y);
     var snake_head = document.querySelector("[data-cell='" + start_coord_x + "-" + start_coord_y + "']");
     snake_head.classList.add('snake-unit');
 
@@ -75,21 +75,28 @@ function move() {
     var coord_x = parseInt(snake_coords[0]);
     var coord_y = parseInt(snake_coords[1]);
 
+
     // определяем новую точку
     if(direction == "x-") {
+        if (coord_x==0) {coord_x+=FIELD_SIZE_X}
         new_unit = document.querySelector("[data-cell='"+ (coord_x - 1) + '-' + coord_y +"']");
     } else if (direction == "x+") {
+        if (coord_x==19) {coord_x=-1}
         new_unit = document.querySelector("[data-cell='"+ (coord_x + 1) + '-' + coord_y +"']");
     } else if (direction == "y+") {
+        if (coord_y==19) {coord_y=-1}
         new_unit = document.querySelector("[data-cell='"+ coord_x + '-' + (coord_y + 1)  +"']");
     } else if (direction == "y-") {
+        if (coord_y==0) {coord_y+=FIELD_SIZE_Y}
         new_unit = document.querySelector("[data-cell='"+ coord_x + '-' + (coord_y - 1)  +"']");
     }
+
 
     // проверяем, что new_unit – не часть змейки
     // так же проверяем, что змейка не дошла до границы
     // if(!isSnakeUnit(new_unit) && new_unit !== null && !isWall(new_unit)) {
     if(!isSnakeUnit(new_unit) && !isWall(new_unit)) {
+        // console.log(new_unit);
         new_unit.classList.add('snake-unit');
         snake.push(new_unit);
 
